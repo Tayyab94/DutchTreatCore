@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using DutchTreat.Context;
 using DutchTreat.Data;
 using DutchTreat.services;
@@ -33,8 +34,11 @@ namespace DutchTreat
             services.AddDbContext<DutchTreatContext>(cfg =>
             {
                 cfg.UseSqlServer(_config.GetConnectionString("DefaultConnection"),x=>x.MigrationsAssembly("DuthcTreat")); });
+
+            services.AddAutoMapper();
             services.AddTransient<IMailService, NullMailService>();
 
+           
             services.AddTransient<DutchSeeder>();
 
             services.AddScoped<IDutchRepository, DutchRepository>();

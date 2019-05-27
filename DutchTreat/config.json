@@ -1,0 +1,9 @@
+{
+  "Colors": {
+    "Favorite": "Blue"
+  },
+
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB; DataBase=DoutchTreatDb; Integrated Security=true; MultipleActiveResultSets=true;"
+  }
+}

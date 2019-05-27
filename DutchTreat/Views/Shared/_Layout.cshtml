@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Helloe Home Page";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>default-title @ViewBag.Title</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="container">
+        <div class="navbar navbar-inverse">
+            <div class="navbar-header">
+                <div class="navbar-brand">Practices</div>
+                <button class="navbar-toggle" data-toggle="collapse" data-target="#MenuBar">&#9776;</button>
+            </div>
+            <div class="collapse navbar-collapse" id="MenuBar">
+                <ul class="nav navbar-nav">
+                    <li><a asp-action="Index" asp-controller="App">Home</a></li>
+                    <li><a asp-controller="App" asp-action="ContactUs">contac</a></li>
+                    <li><a href="/">Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+
+        <h2>This is @ViewBag.Title page!</h2>
+        @RenderBody()
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/js/index.js"></script>
+
+    @RenderSection("scripts", false)
+</body>
+</html>

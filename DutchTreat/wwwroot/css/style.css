@@ -1,0 +1,50 @@
+﻿body{
+    font-family: -apple-system;
+}
+
+input,textarea{
+    font-size: 17px;
+
+    width: 200px
+}
+
+#mainForm {
+    background-color: #d8bfd8;
+ }
+
+#mainForm input[type=submit]
+{
+    background-color: #BEBE2E;
+    color: white;
+
+}
+
+.main-content {
+    border: 1px solid black;
+    display: inline-block;
+}
+
+
+#mainForm{
+    padding: 5px;
+    border: 1px solid blueviolet;
+    display: inline-block;
+}
+
+#mainForm form label{
+    display: inline-block;
+}
+
+menu li{
+    display: inline;
+
+}
+
+menu li::after{
+    content: " |";
+}
+
+menu li:last-of-type::after{
+    content: "";
+
+}
